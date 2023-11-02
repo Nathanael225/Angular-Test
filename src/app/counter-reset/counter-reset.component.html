@@ -1,0 +1,30 @@
+
+<div class="container">
+    <mat-card class="card-width">
+        <mat-card-header>
+            <div mat-card-avatar class="card-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <div class="padding-date">
+                <mat-form-field>
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" (dateChange)="updateDate($event)">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+    
+            <p>
+            Use the buttons below to reset or back to main age
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-button [routerLink]="['/counter']">Back</a>
+            <button  mat-raised-button color="primary" (click)="submitForm()">VALIDER</button>
+        </mat-card-actions>
+        </mat-card>
+</div>
